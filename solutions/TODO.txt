@@ -1,0 +1,28 @@
+Since this was the first hands-on Rails exposure for some, many were confused even where to start.
+After running rails s, they encountered an error because of a pending migration.
+A more detailed walkthrough of running rake db:migrate and rake db:seed would be helpful.
+
+People had issues getting the HTML id's correct and on the right element.
+Providing links to haml and link_to documentation would alleviate a lot of questions here.
+I think since some people were totally new to rails, they had no idea where to look, so for parts 1 and 2, a link to guides.
+rubyonrails.org/active_record_querying.html would have been helpful to people.
+
+
+People did not understand the redirection to a RESTful route in part 3.
+A brief recap of what it means to be RESTful would help them understand the logic they need to implement.
+I also think moving the RESTful route instructions out of "Hints and caveats" would also help express that this is an
+important part of the spec.
+
+Part 2 said that clicking on a sorting table header should also preserve filtering. Is this really necessary when students
+implement this in part 3? We also don't test this separately from part 3. Using a non-session approach would also imply
+that students should implement filtering that preserves sorting, which is just more difficulty, especially without
+knowledge of hidden_field_tag
+
+Autograder difficulties:
+People failed all tests when they submitted a URL with HTTPS
+Specs should be clarified on whether or not to include /movies in the URL or autograder can handle it
+On receiving a 500 error, autograder ends the test case. If we're testing particular behavior, maybe we should rescue
+these and pass more helpful error messages
+Perhaps autograder should do some seeding of its own or spec should give more specific instructions to seed production app.
+In general, I feel that students were unsure of what to do, so more step-by-step instructions would have helped,
+especially given it was the first exposure to Rails for some.
